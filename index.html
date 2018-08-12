@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
     <title>gcode viewer - online gcode viewer and analyzer in your browser!</title>
     <meta name="description" content="Visual GCode viewer and analyzer in your browser. No need to upload you GCode anywhere, everything is done locally." />
@@ -10,7 +10,6 @@
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="meta" type="application/rdf+xml" title="Dublin" href="/dublin.rdf" />
-    <link rel="canonical" href="http://gcode.ws/" />
 
 
     <link rel="stylesheet" type="text/css" href="css/cupertino/jquery-ui-1.9.0.custom.css" media="screen" />
@@ -41,7 +40,7 @@
 
 </head>
 <body>
-    
+
 <div id="analysisModal" class="modal hide fade">
     <div class="modal-header">
         <h3>Running analysis....</h3>
@@ -55,19 +54,6 @@
         <a href="#" class="btn disabled">Please wait for process to get finished</a>
     </div>
 </div>
-
-<div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <ul class="nav">
-                <li >
-                    <a class="brand" href="#">GCode Viewer</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
 
 <div id="wrap" class="ui-widget ui-widget-content ui-corner-all">
     <div id="control">
@@ -142,9 +128,9 @@
                 <div id="options2DAccordionTab" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <label>Speed display type: </label>
-                            <label for="speedDisplayRadio"><input type="radio" name="speedDisplay" id="speedDisplayRadio" value="1"  onclick="GCODE.ui.processOptions()" checked> mm/sec</label>
-                            <label for="exPerMMRadio"><input type="radio" name="speedDisplay" id="exPerMMRadio" value="1"  onclick="GCODE.ui.processOptions()" > mm extrusion per mm move</label>
-                            <label for="volPerSecRadio"><input type="radio"  name="speedDisplay" id="volPerSecRadio" value="1"  onclick="GCODE.ui.processOptions()" > mm^3/sec</label>
+                            <label for="speedDisplayRadio"><input type="radio" name="speedDisplay" id="speedDisplayRadio" value="1"  onclick="GCODE.ui.processOptions()"> mm/sec</label>
+                            <label for="exPerMMRadio"><input type="radio" name="speedDisplay" id="exPerMMRadio" value="1"  onclick="GCODE.ui.processOptions()"> mm extrusion per mm move</label>
+                            <label for="volPerSecRadio"><input type="radio"  name="speedDisplay" id="volPerSecRadio" value="1"  onclick="GCODE.ui.processOptions()" checked> mm^3/sec</label>
                         <label for="showMovesCheckbox"><input type="checkbox" id="showMovesCheckbox" value="1"  onclick="GCODE.ui.processOptions()" checked> Show non-extrusion moves</label>
                         <label for="showRetractsCheckbox"><input type="checkbox" id="showRetractsCheckbox" value="2" onclick="GCODE.ui.processOptions()" checked> Show retracts and restarts</label>
                         <label for="moveModelCheckbox"><input type="checkbox" id="moveModelCheckbox" value="3"  onclick="GCODE.ui.processOptions()" checked> Move model to the center of the grid</label>
@@ -186,9 +172,9 @@
                             <label for="plasticABS"><input type="radio" name="radPlastic" id="plasticABS" value="ABS"  onclick="GCODE.ui.processOptions()" checked>ABS</label>
                             <label for="plasticPLA"><input type="radio" name="radPlastic" id="plasticPLA" value="PLA"  onclick="GCODE.ui.processOptions()" >PLA</label>
                         <label for="nozzleDia">Nozzle size: <input type="text" value="0.4" id="nozzleDia" onchange="GCODE.ui.processOptions()"/></label>
-						<label for="volumetricE"><input type="checkbox" id="volumetricE" onclick="GCODE.ui.processOptions()"> Volumetric E</label>
-                        <label for="hourlyCost">Printer hourly cost: <input type="text" value="1.00" id="hourlyCost" onchange="GCODE.ui.processOptions()"/></label>
-                        <label for="filamentPrice">Filament price(per gram): <input type="text" value="0.05" id="filamentPrice" onchange="GCODE.ui.processOptions()"/></label>
+						<label for="volumetricE"><input type="checkbox" id="volumetricE" onclick="GCODE.ui.processOptions()" checked> Volumetric E</label>
+                        <label for="hourlyCost">Printer hourly cost: <input type="text" value="0.1" id="hourlyCost" onchange="GCODE.ui.processOptions()"/></label>
+                        <label for="filamentPrice">Filament price(per gram): <input type="text" value="0.15" id="filamentPrice" onchange="GCODE.ui.processOptions()"/></label>
                     </div>
                 </div>
             </div>
@@ -276,6 +262,5 @@
 <script>
     GCODE.ui.initHandlers();
 </script>
-
 </body>
 </html>

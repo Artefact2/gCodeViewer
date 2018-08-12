@@ -1,33 +1,13 @@
-body,
-html {
-    margin:0;
-    padding:0;
-    color:#000;
-    background-image: url(cupertino/images/background.jpg);
-}
 #wrap {
-    width:1000px;
-    height: 680px;
-    position: relative;
-    margin: 20px auto;
-    background:#ffffff;
-    /*border: 5px outset #bbb;*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+	position: relative;
 }
+
 #control {
-    float:left;
-    width:300px;
-    margin-top: 10px;
-    margin-left: 10px;
-    /*background:#ffffff;*/
-    /*margin-right: 10px;*/
-    /*height: 680px;*/
-}
-#file_block {
-    /*margin-top: 20px;*/
-    /*margin-left: 20px;*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20em;
+	height: 100%;
 }
 
 #control_bottom {
@@ -42,21 +22,11 @@ html {
     margin-bottom: 5px;
 }
 #gcode {
-    background: #ffffff;
-    float:right;
-    width: 680px;
-    height: 680px;
-    border-width: 2px;
-    border-style: none none none solid;
-    -webkit-border-top-right-radius: 10px;
-    -webkit-border-bottom-right-radius: 10px;
-    -moz-border-radius-topright: 10px;
-    -moz-border-radius-bottomright: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;}
-
-.CodeMirror {
-    border-bottom-right-radius: 10px;
+	position: absolute;
+	left: 21em;
+	right: 0;
+	top: 0;
+	height: 100%;
 }
 
 #canvas{
@@ -83,7 +53,7 @@ html {
     width: 10px;
     float: right;
     margin-right: 10px;
-}
+f}
 #slider-horizontal {
     height: 10px;
     width: 640px;
@@ -171,9 +141,3 @@ html {
 }
 
 .activeline {background: #fff0b6 !important;}
-
-.socials {
-    padding: 10px;
-}
-
-H1 { text-align: center }
